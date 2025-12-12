@@ -7,7 +7,7 @@ let btn = document.getElementById("btn");
 
 let min = 0;
 let sec = 0;
-
+let sisa = null;
 
 
 
@@ -18,7 +18,9 @@ btn.addEventListener("click",runChrono )
 
 function runChrono () {
 
- let sisa = setInterval(()=>{
+
+          if (sisa === null){
+ sisa = setInterval(()=>{
 
 
 sec++;
@@ -34,6 +36,8 @@ secShow.textContent= `Seconds→ ${sec}`;
 }, 1000) 
 
 return sisa
+          }
+  
 
 }
 
